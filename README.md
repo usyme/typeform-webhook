@@ -1,6 +1,8 @@
 # Typeform Webhook PHP
 A secured PHP wrapper for [Typeform](https://developer.typeform.com/) service.
 
+[![Build Status](https://travis-ci.com/usyme/typeform-webhook.svg?branch=master)](https://travis-ci.com/usyme/typeform-webhook)
+
 ## Install
 First step is to [create a new webhook endpoint](https://www.typeform.com/help/webhooks/) on your typeform account/workspace.
 
