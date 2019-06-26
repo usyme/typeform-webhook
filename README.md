@@ -83,3 +83,7 @@ class TypeformController
 ## Questions?
 
 If you have any questions please [open an issue](https://github.com/usyme/typeform-webhook/issues/new).
+
+## License
+
+This library is released under the MIT License. See the bundled [LICENSE](https://github.com/usyme/typeform-webhook/blob/master/LICENSE) file for details.
