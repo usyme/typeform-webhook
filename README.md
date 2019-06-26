@@ -13,7 +13,7 @@ Then, Update the webhook setting secret on your workspace "connect" section.
 
 Next step is to install the wrapper using [Composer](http://getcomposer.org/):
 ```
-$ composer require usyme/typeform-webhook
+$ composer require usyme/typeform-webhook dev-master
 ```
 
 ## Receive typeform response
