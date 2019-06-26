@@ -4,7 +4,7 @@
   "description": "Typeform webhook wrapper for PHP",
   "keywords": ["typeform", "webhook"],
   "require": {
-    "php": ">=7.1",
+    "php": "^7.2",
     "ext-json": "*",
     "symfony/http-foundation": "^4.3"
   },
