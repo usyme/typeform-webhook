@@ -33,6 +33,11 @@ class WebhookRequest
     protected $webhook;
 
     /**
+     * @var Response
+     */
+    protected $response;
+
+    /**
      * TypeformRequest constructor.
      *
      * @param Webhook $webhook
@@ -75,9 +80,13 @@ class WebhookRequest
      */
     public function getResponse(Request $request): Response
     {
-        $secret  = $request->headers->get(self::HEADER_SIGNATURE_KEY);
-        $payload = $request->getContent();
+        if (null === $this->response) {
+            $secret  = $request->headers->get(self::HEADER_SIGNATURE_KEY);
+            $payload = $request->getContent();
 
-        return $this->webhook->getResponse($secret, $payload);
+            $this->response = $this->webhook->getResponse($secret, $payload);
+        }
+
+        return $this->response;
     }
 }
