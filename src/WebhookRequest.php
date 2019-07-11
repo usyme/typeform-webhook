@@ -65,7 +65,7 @@ class WebhookRequest
 
         // Replace the request parameters by
         $request->request->replace(
-        // Data presented on typeform request as array (key => value)
+            // Data presented on typeform request as array (key => value)
             $response->getFormResponseData()
         );
     }
