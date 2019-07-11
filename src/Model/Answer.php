@@ -51,9 +51,19 @@ class Answer extends AbstractObject
      */
     public function getValue()
     {
+        // Unique choice
         if ($this->getType() === 'choice') {
             if (is_array($choice = $this->get('choice')) && array_key_exists('label', $choice)) {
                 return $choice['label'];
+            }
+
+            return null;
+        }
+
+        // Multiple choices
+        if ($this->getType() === 'choices') {
+            if (is_array($choices = $this->get('choices')) && array_key_exists('labels', $choices)) {
+                return $choices['labels'];
             }
 
             return null;
